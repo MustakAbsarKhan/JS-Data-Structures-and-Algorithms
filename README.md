@@ -5,3 +5,4 @@ Please Click on the link to check each data structure implementation!
 **2. Sets -** https://github.com/MustakAbsarKhan/JS-Data-Structures-and-Algorithms/tree/master/Sets</br>
 **3. Queue -** https://github.com/MustakAbsarKhan/JS-Data-Structures-and-Algorithms/tree/master/Queue</br>
 **4. Linked List -** https://github.com/MustakAbsarKhan/JS-Data-Structures-and-Algorithms/tree/master/Linked-list</br>
+**5. Binary-Search-Tree -** https://github.com/MustakAbsarKhan/JS-Data-Structures-and-Algorithms/tree/master/Binary-Search-Tree</br>

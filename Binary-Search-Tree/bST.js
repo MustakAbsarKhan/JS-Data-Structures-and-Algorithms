@@ -38,6 +38,81 @@ class BST{
             return searchTree(node);
         }
     }
+
+    findMin(){
+        let current = this.root;
+        while(current.left != null){
+            current = current.left;
+        }
+        return current.data;
+    }
+
+    findMax(){
+        let current = this.root;
+        while(current.right != null){
+            current = current.right;
+        }
+        return current.data;
+    }
+    find(){
+        let current = this.root;
+        while(current.data !== data){
+            if (data<current.data){
+                current = current.left;
+            }else{
+                current = current.right;
+            }
+            if(current===null){
+                return null;
+            }
+        }
+        return current;
+    }
+
+    isPresent(data){
+        let current = this.root;
+        while(current){
+            if(data === current.data){
+                return true;
+            }else if(data<current.data){
+                current = current.left;
+            }else{
+                current = current.right;
+            }
+        }
+        return false;
+    }
+
+    remove(data){
+        const removeNode = function(node, data){
+            if(node == null){
+                return null;
+            }
+            if(data == node.data){
+                //node has no children
+                if(node.left == null && node.right == null){
+                    return null;
+                }
+                //node has no left child
+                if(node.left == null){
+                    return node.right;
+                }
+                //node has no right child
+                if(node.right == null){
+                    return node.left;
+                }
+                //node has two children
+                var tempNode = node.right;
+                while(tempNode.left != null){
+                    tempNode = tempNode.left;
+                }
+                node.data = tempNode.data;
+                node.right = removeNode(node.right,tempNode.data);
+                return node;
+            }
+        }
+        this.root = removeNode(this.root,data);
+    }
 }
 const bst = new BST();
 //console.log(bst.add(15))

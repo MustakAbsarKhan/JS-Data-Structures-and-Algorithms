@@ -115,4 +115,4 @@ class BST{
     }
 }
 const bst = new BST();
-//console.log(bst.add(15))
+console.log(bst.add(15))
